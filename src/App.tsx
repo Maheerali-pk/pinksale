@@ -25,10 +25,24 @@ const GlobalStyles = createGlobalStyle`
       color: ${(p) => p.theme["active-menu-item-text"]}!important;
     }
     
+    
   }
+  ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-thumb {
+    background-color: ${(p) => p.theme["scrollbar-thumb"]} ;
+    border-radius: 8px;
+}
+::-webkit-scrollbar-track {
+    box-shadow: rgb(105 105 105) 0px 0px 2px inset;
+    border-radius: 10px;
+}
 `;
 
 export const lightTheme = {
+   "scrollbar-thumb": "rgb(105, 105, 105)",
    "sun-color": "#f95192",
    primary: "#f95192",
    "moon-color": "#222",
@@ -67,6 +81,7 @@ export const lightTheme = {
 };
 
 const darkTheme = {
+   "scrollbar-thumb": "#f95192",
    "moon-color": "#f95192",
    primary: "#f95192",
    "sun-color": "#c9c8c5",
